@@ -81,9 +81,13 @@ function filter_by_category() {
 
 /*Remove todos os filtros de categoria*/
 function remove_filter() {
-    var product_cards = window.document.getElementsByClassName('card');
+    searchButton = window.document.getElementById('filter-button');
     window.document.getElementById('select-category').disabled = false;
     retrieve_products();
+    alert('Filtro removido');
+    window.document.getElementById('remove-button').style.display = 'none';
+    searchButton.disabled = false;
+    searchButton.style.opacity = 1;
 }
 
 /*Retorna todas as categorias e constroi html com os valores*/
