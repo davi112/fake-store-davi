@@ -101,7 +101,7 @@ function retrieve_products(page) {
     ha o loading(false) que deve ser executado um pouquinho de tempo depois, dado o tempinho que demora pra requisição retornar.
     Em suma, enquanto a requisicao nao retornar os dados e o html não for montado, mantem o loading, pois isso aqui pode ser
     executado enquanto a requisicao ainda acontece*/
-    loading(true);
+   loading(true);
 }
 
 /*Filtra os produtos pela categoria de forma paginada, desabilitando os botoes quando necessario*/
@@ -220,8 +220,6 @@ function search_items() {
     if (input_search.length > 0) {
         container_paginacao.style.display = 'none';
         window.document.getElementById('remove-button').style.display = 'none';
-        searchButton.disabled = false;
-        searchButton.style.opacity = 1;
     } else {
         container_paginacao.style.display = 'flex';
     }
